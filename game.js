@@ -62,6 +62,6 @@ function gameLoop() {
     ctx.fillText(`Score: ${score}`, 20, 40);
   
   blackHoleRotation += 0.05;
-  angle += 0.002;
+  angle += 0.006;
   requestAnimationFrame(gameLoop);
 }

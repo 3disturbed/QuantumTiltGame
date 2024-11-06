@@ -8,6 +8,7 @@ function createResetHoles() {
       originalX: Math.random() * (canvas.width - 400) + 200,
       originalY: wall.y + ball.radius,
       radius: ball.radius * 3,
+      myAngle : Math.random() * 20,
     };
 
     resetHoles.push(resetHole);
@@ -16,8 +17,8 @@ function createResetHoles() {
 
 function drawResetHoles() {
   resetHoles.forEach(resetHole => {
-    resetHole.x = resetHole.originalX + 200 * Math.cos(angle);
-    resetHole.y = resetHole.originalY + 100 * Math.sin(angle);
+    resetHole.x = resetHole.originalX + 200 * Math.cos(angle + resetHole.myAngle);
+    resetHole.y = resetHole.originalY + 100 * Math.sin(angle + resetHole.myAngle);
 
     ctx.save();
     ctx.translate(resetHole.x, resetHole.y);

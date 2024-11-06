@@ -87,8 +87,12 @@ function stopDragging(event) {
 // Handle orientation changes for tilt mode
 function handleOrientation(event) {
   if (gameMode === "tilt") {
-    tiltX = event.gamma / 2;
-    tiltY = event.beta / 2;
+    tiltX = event.gamma ;
+    tiltY = event.beta ;
+    // clamp the values to -20 and 20
+    tiltX = Math.min(20, Math.max(-20, tiltX));
+    tiltY = Math.min(20, Math.max(-20, tiltY));
+
   }
 }
 

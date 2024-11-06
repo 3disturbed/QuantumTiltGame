@@ -2,18 +2,18 @@ const walls = [];
 
 function createWalls() {
   walls.length = 0;
-  let yPosition = 200;
+  let yPosition = 100;
   let leftSide = true;
 
-  while (yPosition < canvas.height - 350) {
-    const wallLength = (0.3 * canvas.width) + Math.random() * 0.3 * canvas.width;
+  while (yPosition < canvas.height - 200) {
+    const wallLength = (0.5 * canvas.width) + Math.random() * 0.3 * canvas.width;
     const wallX = leftSide ? 0 : canvas.width - wallLength;
     const wallY = yPosition;
 
     walls.push({ x: wallX, y: wallY, width: wallLength, height: 40 });
 
     leftSide = !leftSide;
-    yPosition += ball.radius * (Math.floor(Math.random() * 8) + 7);
+    yPosition += 175;
   }
 }
 
