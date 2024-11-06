@@ -43,7 +43,7 @@ function stopGame() {
 function startGame() {
   if (!isGameStarted) {
     isGameStarted = true;
-    document.documentElement.requestFullscreen();
+
     document.getElementById("tiltModeButton").style.display = "none";
     document.getElementById("fingerModeButton").style.display = "none";
     document.getElementById("mouseModeButton").style.display = "none";
