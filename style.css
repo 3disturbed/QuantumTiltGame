@@ -1,12 +1,14 @@
 body, html {
     margin: 0;
     padding: 0;
-    overflow: hidden;
+ 
     background-image: url('logo.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
+    width: 100vw;
+    height: 100vh;
 
   }
   canvas {
@@ -23,16 +25,11 @@ body, html {
     border-radius: 20px;
     position: absolute;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 2vw;
     cursor: pointer;
     height: 10vh;   
     width: 20vw;
-    opacity: 0.7;
-  }
-  #startButton {
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    opacity: 0.5;
   }
   #tiltModeButton {
     
@@ -52,7 +49,7 @@ body, html {
   }
   #highScore {
     display: flex;
-    font: 32px Arial;
+    font: 2vh Arial;
 
     top: 75vh;
     left: 70%;
