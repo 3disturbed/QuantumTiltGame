@@ -25,21 +25,22 @@ body, html {
     font-size: 16px;
     cursor: pointer;
     height: 10vh;   
-    width: 10vw;
+    width: 20vw;
+    opacity: 0.7;
   }
   #startButton {
-    top: 50%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
   #tiltModeButton {
     
-    left:60vw;
+    left:40vw;
 
   }
   #fingerModeButton {
 
-    left: 70vw;
+    left:60vw;
 
   }
   #mouseModeButton {

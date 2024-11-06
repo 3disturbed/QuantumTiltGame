@@ -8,13 +8,13 @@ const hole = {
     ctx.save();
     ctx.translate(hole.x, hole.y);
     ctx.rotate(blackHoleRotation / 2);
-    ctx.globalAlpha = 0.5;
+
     // white glow effect
     ctx.shadowColor = 'white';
     ctx.shadowBlur = 30;
 
     ctx.drawImage(winHoleImage, -hole.radius, -hole.radius, hole.radius * 2, hole.radius * 2);
-    ctx.globalAlpha = 1;
+
     ctx.restore();
   }
   
