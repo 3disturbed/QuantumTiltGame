@@ -13,9 +13,18 @@ winHoleImage.src = 'winhole.png';
 
 const backdrop = new Image();
 backdrop.src = 'backdrop.png';
-
+// get highscore from local storage
+let highScore = localStorage.getItem('highScore') || 0;
+document.getElementById("score").innerHTML ="HighScore : " + highScore + "<br> Last Score : " + score;
 
 function resetGame() {
+ // update highscore
+ document.getElementById("score").innerHTML ="HighScore : " + highScore + "<br> Last Score : " + score;
+
+    if (score > highScore) {
+    highScore = score;
+    localStorage.setItem('highScore', highScore);
+    }
   ball.x = 50;
   ball.y = canvas.height - 50;
   hole.x = Math.random() * (canvas.width - 40) + 20;
@@ -49,12 +58,8 @@ function gameLoop() {
     // reset the opacity
     ctx.globalAlpha = 1;
     ctx.restore();
-  
-  updateBallPosition();
-
-
- 
-  drawBall();
+    updateBallPosition();
+    drawBall();
     // Display the score
     ctx.font = '24px Arial';
     ctx.fillStyle = '#999';
@@ -63,5 +68,10 @@ function gameLoop() {
   
   blackHoleRotation += 0.05;
   angle += 0.006;
-  requestAnimationFrame(gameLoop);
+  if(isGameStarted) {
+    requestAnimationFrame(gameLoop);
+  } else {
+   
+   ctx.clearRect(0, 0, canvas.width, canvas.height);
+  }
 }

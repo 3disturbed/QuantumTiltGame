@@ -88,7 +88,7 @@ function checkWinHoleCollision() {
       const distance = Math.sqrt(dx * dx + dy * dy);
   
       if (distance < ball.radius + resetHole.radius) {
-        score = 0; // Reset the score if the ball hits a black hole
+        stopGame();
         resetGame(); // Reset the game if the ball hits a black hole
       }
     });

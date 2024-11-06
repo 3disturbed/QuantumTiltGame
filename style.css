@@ -49,4 +49,16 @@ body, html {
 
 
   }
+  #highScore {
+    display: flex;
+    font: 32px Arial;
+
+    top: 75vh;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    color: white;
+    align-items: center;
+    justify-content: center;
+  }
   

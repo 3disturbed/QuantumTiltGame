@@ -23,20 +23,32 @@ function setGameMode(mode) {
     }
 
     startGame();
+   
   
 }
 
 document.getElementById("startButton").style.display = "none";
 
-
+function stopGame() {
+    isGameStarted = false;
+    document.exitFullscreen();
+    document.getElementById("tiltModeButton").style.display = "block";
+    document.getElementById("fingerModeButton").style.display = "block";
+    document.getElementById("mouseModeButton").style.display = "block";
+    document.getElementById("highScore").style.display = "block";
+    removeMotionListeners();
+    removeMouseListeners();
+    removeTouchListeners();
+}
 function startGame() {
   if (!isGameStarted) {
     isGameStarted = true;
-
+    document.documentElement.requestFullscreen();
     document.getElementById("tiltModeButton").style.display = "none";
     document.getElementById("fingerModeButton").style.display = "none";
     document.getElementById("mouseModeButton").style.display = "none";
-   
+    document.getElementById("highScore").style.display = "none";
+    score = 0;
     resetGame();
     gameLoop();
   }
