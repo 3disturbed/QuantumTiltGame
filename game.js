@@ -1,6 +1,6 @@
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+canvas.width = window.innerWidth * 2;
+canvas.height = window.innerHeight * 2;
 let blackHoleRotation = 0;
 let angle = 0;
 let score = 0;

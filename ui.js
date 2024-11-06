@@ -118,7 +118,7 @@ function handleMouseMove(event) {
     const mouseY = event.clientY - rect.top;
 
     // Map mouseX to gamma (tiltX) and mouseY to beta (tiltY) ranges
-    tiltX = ((mouseX / canvas.width) - 0.5) * 40; // Simulate gamma: -20 to 20
-    tiltY = ((mouseY / canvas.height) - 0.5) * 40; // Simulate beta: -20 to 20
+    tiltX = ((mouseX / (canvas.width / 2)) - 0.5) * 40; // Simulate gamma: -20 to 20
+    tiltY = ((mouseY / (canvas.height / 2)) - 0.5) * 40; // Simulate beta: -20 to 20
   }
 }
