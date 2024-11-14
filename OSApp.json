@@ -1,0 +1,8 @@
+{
+  "name": "Quantum Tilt",
+  "icon": "https://3disturbed.github.io/QuantumTiltGame/Icon.png",
+  "link": "https://3disturbed.github.io/QuantumTiltGame/",
+  "repo": "https://github.com/3disturbed/QuantumTiltGame/",
+  "type": "game",
+  "target": "frame"
+}
